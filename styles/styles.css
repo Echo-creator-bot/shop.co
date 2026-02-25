@@ -1,0 +1,161 @@
+/*==============================ОБЩИЕ СТИЛИ===============================*/
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #F2F0F1;
+    --medium-gray: #F0EEED;
+    --neutral-gray: #F0F0F0;
+    --yellow: #FFC633;
+    --red: #FF3333;
+    --green: #01AB31;
+} 
+
+body {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+ul{
+    list-style: none;     
+    margin: 0;           
+    padding: 0; 
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1270px;
+}
+
+.button {
+    border-radius: 62px;
+    transition: all 0.4s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.tittle {
+    font-family: 'Integral CF';
+    font-weight: 700px;
+    font-size: 48px;
+    line-height: 100%;
+}
+
+.visually-hidden
+
+/*=====================================HEADER========================================*/
+/*====================================HEADER TOP=====================================*/
+.header {
+
+}
+.header-top {
+padding: 24px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+
+}
+
+.header-top-logo { /* анимацию сюда */
+
+}
+.header-top-nav {
+}
+.header-top-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+}
+.header-top-item {
+    line-height: 100%;
+}
+.header-top-item-link { /* анимацию сюда */
+
+}
+.header-top-item-link:hover {
+
+}
+
+.header-top-search-wrap {
+    width: 45.43%;
+}
+.header-top-search-icon {
+    width: 100%;
+    display: flex;
+    padding: 12px 0 12px 16px;
+    border-radius: 62px;
+    border: none;
+    gap: 12px;
+
+}
+
+.search-svg-wrap{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top-search-input {
+    background-color: inherit;
+    border: none;
+
+}
+.header-top-search-input:focus {
+}
+
+
+.header-top-user-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+.header-top-interaction-CartLink { /* анимацию сюда */
+    display: flex;
+}
+.header-top-interaction-user { /* анимацию сюда */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: inherit;
+
+}
+
+@media (max-width: 1270px) {
+    .header-top{
+        justify-content: center;
+    }
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+    .header-top-search-wrap{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+
+}
