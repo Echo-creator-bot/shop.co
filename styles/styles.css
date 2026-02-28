@@ -334,6 +334,35 @@ height: 100%;
 .header-end-block {
 }
 
+.Versache-svg{
+    width: 167px;
+    height: 34px;
+}
+.zara-svg{
+width: 91px;
+height: 38px;
+}
+.gucci-svg{
+    width: 156px;
+    height: 33px;
+}
+.prada-svg{
+ width: 194px;
+ height: 32px;
+}
+.Calvin-svg{
+ width: 207px;
+ height: 34px;
+}
+.star-settings-1{
+width: 104px;
+height: 104px;
+}
+.star-settings-2{
+width: 56px;
+height: 56px;
+}
+
 /*Адаптив*/
 
 @media (max-width: 1270px) {
@@ -434,6 +463,14 @@ height: 100%;
         padding:  44px 15px 44px 15px;
 
     }
+    .star-settings-1{
+width: 76px;
+height: 76px;
+}
+.star-settings-2{
+width: 44px;
+height: 44px;
+}
 }
 @media (max-width: 576px) {
     /*h-t*/
@@ -470,13 +507,134 @@ height: 100%;
             width: 430px;
             height: auto;
     }
+    .header-body-differences {
+        justify-content: center;
+    }
+    .Calvin-svg{
+        width: 135px;
+        height: 22px;
+    }
+    .prada-svg{
+        width: 127px;
+        height: 21px;
+    }
+    .gucci-svg{
+        width: 110px;
+        height: 26px;
+    }
+    .zara-svg{
+        width: 64px;
+        height: 27px;
+    }
+
+    .Versache-svg{
+        width: 117px;
+        height: 24px;
+    }
+    .header-end-wrap{
+        padding-left: 0;
+        padding-right: 0;
+        gap: 32px;
+    }
+    .header-end-block{
+        margin: 0 8px;
+    }
+            .header-body-content-title{
+        font-size: 38px;
+        line-height: 34px;
+    }
+    .header-body-content-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .decortion-stroke{
+        height: 54px;
+    }
+    .heade-body-differences-number{
+        font-size: 26px;
+
+    }
+    .heade-body-differences-detail{
+        font-size: 14px;
+    }
+    .header-body-wrap{
+        gap: 0px;
+    }
 }
 @media (max-width: 480px) {
     /*h-t*/
-            .header-body-image-wrap {
-        min-width: 370px;
-        height: auto;
+    .header-body-content-title, .header-body-content-text {
+        text-align: start;
     }
 
-    /*h-b*/
+            .header-body-image-wrap {
+        min-width: 390px;
+        height: auto;
+    }
+        .header-end-block{
+        margin: 0 0px;
+    }
+        .ShopNow-link-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    .ShopNow-link{
+        width: 100%;
+        margin: 0 10%;
+    }
+    .header-body-ShopNow-button{
+        width: 100%;
+    }
+            .header-body-content-title{
+        font-size: 36px;
+        line-height: 34px;
+    }
+    .header-body-content-text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .decortion-stroke{
+        height: 52px;
+    }
+    .heade-body-differences-number{
+        font-size: 24px;
+
+    }
+    .heade-body-differences-detail{
+        font-size: 12px;
+    }
+    .header-body-wrap{
+        gap: 0px;
+    }
+
+    .star-position-1{
+    top: 13%;
+    left: 74.9%;
 }
+
+    .star-position-2{
+    top: 44.8%;
+    left: 10%;
+}
+.header-body-content-wrap{
+    gap: 20px;
+}
+    /*h-b*/
+    .wrap-search-info{
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .star-position-2{
+    top: 44.8%;
+    left: 10%;
+}
+
+    .star-position-1{
+    top: 13%;
+    left: 74.9%;
+}
+}
+
