@@ -569,7 +569,7 @@ object-position: center;
     background-image: url('../image/gym-back.png');
     background-size:110%;
     background-repeat: no-repeat;
-    background-position: -142% 38%;; 
+    background-position: -142% 38%;
     width: 32.05%;
     border-radius: 20px;
 }
@@ -661,13 +661,145 @@ object-position: center;
 .header-body-content-wrap {
     padding-top: 40px;
 }
-    
+.Formal{
+    width: 407px;
+        background-position: -142% 38%;
+    background-size:110%;
+}
+.Party{
+    width: 407px;
+    background-position: 45% 38%;
+    background-size:131%;
+}
+.Casual{
+        background-position: 33% 41%;
+    background-size: 188%;
+
+}
+.Gym{
+    background-position: 9% 38%;
+    background-size:149%;
+}
 }
 
 
 @media (max-width: 992px) {
     /*h-t*/
     /*h-b*/
+    .Formal{
+    max-width: 310px;
+    height: 190px;
+    background-position: -142% 38%;
+    background-size:110%;
+}
+.Party{
+   max-width: 310px;
+    height: 190px;
+    background-position: 45% 38%;
+    background-size:131%;
+}
+.Casual{
+            max-width: 310px;
+    height: 190px;
+        background-position: 33% 41%;
+    background-size: 188%;
+
+}
+.Gym{
+            max-width: 310px;
+    height: 210px;
+    background-position: 9% 38%;
+    background-size:149%;
+    
+
+}
+.flex-DressStyle-row{
+height: 240px;
+}
+.tittle-forDressstyle{
+    font-size: 32px;
+    line-height: 36px;
+}
+.flex-DressStyle-item{
+    padding: 16px 24px;
+    line-height: 100%;
+    font-size: 24px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/**/
+.product-card-image-block {
+    width: 295px;
+    height: 298px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.product-card-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+/**/
+.product-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.product-card-name {
+}
+.product-card-rating-wrap {
+    display: flex;
+    gap: 13px;
+}
+.product-card-rating-star-wrap {
+}
+.product-card-rating-valuation-wrap {
+    display: flex;
+}
+.product-card-rating-valuation {
+}
+.product-card-rating-of {
+}
+.product-card-rating-of-number {
+}
+.product-card-price-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 68.5%;
+}
+.product-card-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--black);
+}
+.product-card-price-past-priсе {
+    font-weight: 700;
+    font-size: 24px;
+        line-height: 100%;
+    opacity: 0.4;
+    display: none;
+
+}
+.product-card-price-sell {
+    background-color: #FF33331A;
+    border-radius: 62px;
+    color: var(--red);
+    font-size: 12px;
+    line-height: 100%;
+    padding: 6px 14px 6px 14px;
+    display: none;
+
+}
+
+
 }
 @media (max-width: 768px) {
     /*h-t*/
@@ -870,3 +1002,27 @@ height: 44px;
 
 }
 
+/* Класс для включения скролла */
+.flex-wrap-for-catalog.draggable-mode {
+  overflow-x: auto;
+  cursor: grab;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px; /* чтобы удобнее хватать */
+  /* Скрываем скроллбар */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.flex-wrap-for-catalog.draggable-mode::-webkit-scrollbar {
+  display: none;
+}
+
+.flex-wrap-for-catalog.draggable-mode:active {
+  cursor: grabbing;
+}
+
+/* Убираем старый костыль с display: none */
+.card-fourth {
+  display: flex; /* меняем с none на flex */
+}
