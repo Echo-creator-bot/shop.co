@@ -63,6 +63,7 @@ a {
     font-weight: 700px;
     font-size: 48px;
     line-height: 100%;
+
 }
 
 .visually-hidden
@@ -362,6 +363,222 @@ height: 104px;
 width: 56px;
 height: 56px;
 }
+/*============================MAIN=================================*/
+/*============================S-C==================================*/
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.main-section-CatalogPrimary {
+    padding: 72px 0 0px 0;
+}
+.wrapper {
+}
+.for-section-CatalogPrimary{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.section-for-Catalog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 36px;
+}
+.NewArrivals {
+}
+.for-Arrivals{
+    padding-bottom: 19px;
+}
+.flex-wrap-for-catalog {
+    display: flex;
+    gap: 20px;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/**/
+.product-card-image-block {
+    width: 295px;
+    height: 298px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.product-card-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center;
+}
+/**/
+.product-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.product-card-name {
+}
+.product-card-rating-wrap {
+    display: flex;
+    gap: 13px;
+}
+.product-card-rating-star-wrap {
+}
+.product-card-rating-valuation-wrap {
+    display: flex;
+}
+.product-card-rating-valuation {
+}
+.product-card-rating-of {
+}
+.product-card-rating-of-number {
+}
+.product-card-price-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 68.5%;
+}
+.product-card-price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--black);
+}
+.product-card-price-past-priсе {
+    font-weight: 700;
+    font-size: 24px;
+        line-height: 100%;
+    opacity: 0.4;
+    display: none;
+
+}
+.product-card-price-sell {
+    background-color: #FF33331A;
+    border-radius: 62px;
+    color: var(--red);
+    font-size: 12px;
+    line-height: 100%;
+    padding: 6px 14px 6px 14px;
+    display: none;
+
+}
+
+.ViewAll-button-wrap {
+}
+.ViewAll-button {
+    width: 218px;
+    padding: 16px 54px 16px 54px;
+    border-radius: 62px;
+    border: 1px solid #0000001A;
+    background-color: inherit;
+    color: var(--black);
+    line-height: 100%;
+    font-weight: 500;
+    font-size: 16px;
+}
+.decoration-stroke {
+    height: 0.75px;
+    background-color: #0000001A;
+
+}
+.TopSelling {
+}
+
+.for-top-selling{
+    padding-bottom: 19px;
+}
+
+/*=======================================*/
+
+
+
+
+.section-for-DressStyle {
+}
+
+.for-dress-style{
+    border-radius: 40px ;
+    background-color:var(--neutral-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    padding: 70px 64px 76px 64px;
+
+}
+.flex-DressStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.flex-DressStyle-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 289px;
+    width: 100%;
+}
+.flex-DressStyle-item {
+        background-color: var(--white);
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 100%;
+        padding: 25px 36px;
+}
+.Casual {
+    background-image: 
+        url('../image/casual-back.png');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 30% 35%; 
+    border-radius: 20px;
+    width: 32.05%;
+    transform: scaleX(-1);
+    
+}
+.rotate-back{
+    transform: scaleX(-1);
+}
+
+.Formal {
+    background-image: url('../image/formal-back.png');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -60% 25%; 
+    width: 684px;
+    border-radius: 20px;
+}
+.Party {
+    background-image: url('../image/party-back.png');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -84% 50.7%; 
+    width: 684px;
+    
+    border-radius: 20px;
+
+}
+.Gym {
+    background-image: url('../image/gym-back.png');
+    background-size:110%;
+    background-repeat: no-repeat;
+    background-position: -142% 38%;; 
+    width: 32.05%;
+    border-radius: 20px;
+}
+
+.visible{
+    display: block;
+}
+
+
 
 /*Адаптив*/
 
@@ -404,6 +621,17 @@ height: 56px;
     .heade-body-differences-detail{
         font-size: 14px;
     }
+    .card-first{
+    }
+    .card-second{
+
+    }
+    .card-third{
+
+    }
+    .card-fourth{
+    }
+
 }
 
 @media (max-width: 1045px) {
@@ -623,6 +851,9 @@ height: 44px;
     .wrap-search-info{
         padding-right: 20px;
     }
+    .last {
+    display: none;
+}
 }
 
 @media (max-width: 390px) {
@@ -636,5 +867,6 @@ height: 44px;
     top: 13%;
     left: 74.9%;
 }
+
 }
 
