@@ -1,63 +1,65 @@
-// Ждем загрузки страницы
-document.addEventListener('DOMContentLoaded', function() {
-  
-  // Находим оба ряда с товарами
-  const catalogRows = document.querySelectorAll('.flex-wrap-for-catalog');
-  
-  // Функция проверки ширины
-  function checkWidthAndEnableDrag() {
-    catalogRows.forEach(row => {
-      // Если контент шире контейнера - включаем draggable
-      if (row.scrollWidth > row.clientWidth) {
-        row.classList.add('draggable-mode');
-      } else {
-        row.classList.remove('draggable-mode');
-      }
-    });
+// Функция для включения/выключения режима слайдера
+function setupSlider(container) {
+  // Проверяем, нужно ли включать слайдер
+  function checkAndToggleSlider() {
+    // Если контент шире контейнера - включаем слайдер
+    if (container.scrollWidth > container.clientWidth) {
+      container.classList.add('slider-mode');
+    } else {
+      container.classList.remove('slider-mode');
+    }
   }
   
   // Проверяем при загрузке
-  checkWidthAndEnableDrag();
+  checkAndToggleSlider();
   
   // Проверяем при изменении размера окна
-  window.addEventListener('resize', checkWidthAndEnableDrag);
+  window.addEventListener('resize', checkAndToggleSlider);
   
   // ===== КОД ПЕРЕТАСКИВАНИЯ =====
-  catalogRows.forEach(row => {
-    let Clamped = false;
-    let Click_Position;
-    let Scroll_left;
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  
+  container.addEventListener('mousedown', (e) => {
+    // Работаем только если есть класс slider-mode
+    if (!container.classList.contains('slider-mode')) return;
     
-    row.addEventListener('mousedown', (e) => {
-      // Работаем только если есть класс draggable-mode
-      if (!row.classList.contains('draggable-mode')) return;
-      
-      Clamped = true;
-      row.style.cursor = 'grabbing';
-      Click_Position = e.pageX - row.offsetLeft;
-      Scroll_left = row.scrollLeft;
-      e.preventDefault();
-    });
-    
-    row.addEventListener('mouseleave', () => {
-      if (!row.classList.contains('draggable-mode')) return;
-      Clamped = false;
-      row.style.cursor = 'grab';
-    });
-    
-    row.addEventListener('mouseup', () => {
-      if (!row.classList.contains('draggable-mode')) return;
-      Clamped = false;
-      row.style.cursor = 'grab';
-    });
-    
-    row.addEventListener('mousemove', (e) => {
-      if (!Clamped || !row.classList.contains('draggable-mode')) return;
-      e.preventDefault();
-      const x = e.pageX - row.offsetLeft;
-      const walk = (x - Click_Position) * 1.5;
-      row.scrollLeft = Scroll_left - walk;
-    });
+    isDown = true;
+    container.style.cursor = 'grabbing';
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    e.preventDefault();
   });
   
+  container.addEventListener('mouseleave', () => {
+    if (!container.classList.contains('slider-mode')) return;
+    isDown = false;
+    container.style.cursor = 'grab';
+  });
+  
+  container.addEventListener('mouseup', () => {
+    if (!container.classList.contains('slider-mode')) return;
+    isDown = false;
+    container.style.cursor = 'grab';
+  });
+  
+  container.addEventListener('mousemove', (e) => {
+    if (!isDown || !container.classList.contains('slider-mode')) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    container.scrollLeft = scrollLeft - walk;
+  });
+}
+
+// Ждем загрузки страницы
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим все ряды с карточками
+  const catalogRows = document.querySelectorAll('.flex-wrap-for-catalog');
+  
+  // Для каждого ряда запускаем функцию
+  catalogRows.forEach(row => {
+    setupSlider(row);
+  });
 });
