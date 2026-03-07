@@ -1,3 +1,46 @@
+/* ДИСКЛЕЙЦМЕР*/
+const disclaimer_close = document.querySelector('.disclaimer-close')
+const disclaimer = document.querySelector('.disclaimer')
+disclaimer_close.addEventListener('click', function() {
+  disclaimer.style.display = 'none';
+});
+
+/* ФОРМА   */
+const autorization = document.querySelector('.autorization')
+const autorization_button = document.querySelector('.header-top-interaction-user')
+const close_form = document.querySelector('.close-form')
+autorization_button.addEventListener('click', function(){
+  autorization.style.display = 'block';
+  autorization.style.display = 'flex';
+})
+close_form.addEventListener('click', function(){
+  autorization.style.display = 'none';
+})
+const sign_up_button = document.querySelector('.sign-up');
+const log_in_button = document.querySelector('.log-in');
+const LogIn_wrap = document.querySelector('.LogIn-wrap');
+const SignUp_wrap = document.querySelector('.SignUp-wrap');
+log_in_button.addEventListener('click', function() {
+  LogIn_wrap.style.display = 'flex';
+  SignUp_wrap.style.display = 'none';
+  log_in_button.style.textDecoration = 'underline';
+  sign_up_button.style.textDecoration = 'none';
+
+})
+sign_up_button.addEventListener('click', function() {
+  LogIn_wrap.style.display = 'none';
+  SignUp_wrap.style.display = 'flex';
+  sign_up_button.style.textDecoration = 'underline';
+  log_in_button.style.textDecoration = 'none';
+})
+const Sign_In = document.querySelector('.Sign-In')
+Sign_In.addEventListener('click', function() {
+  alert('Учебный проект!\n\nЭто демо-версия и система авторизации не функционирует')
+})
+const Sign_up_test = document.querySelector('.Sign_up_test')
+Sign_up_test.addEventListener('click', function() {
+  alert('Учебный проект!\n\nЭто демо-версия и система регистрации не функционирует')
+})
 /* фокус на инпут при клике по иконке */
 const Search_Icon = document.querySelector('.search-svg-wrap');
 const Search_input = document.querySelector('.header-top-search-input');
@@ -16,6 +59,43 @@ document.addEventListener('click', function(){
 
 */
 /*--------------------------------------------------------- */
+const header_menu = document.querySelector('.header-menu');
+const for_top_logo = document.querySelector('.for-top-logo');
+const nav_burger = document.querySelector('.nav-burger')
+header_menu.addEventListener('click', function() {
+  nav_burger.style.display = 'flex';
+  for_top_logo.style.display = 'none';
+
+
+  
+})
+const burger_dropdown = document.querySelector('.burger_dropdown')
+const burger_nav_dropdown_menu_ul = document.querySelector('.burger-nav-dropdown-menu-ul')
+const dropdown_ico = document.querySelector('.dropdown_ico')
+burger_dropdown.addEventListener('click', function() {
+  // Проверяем текущее состояние и переключаем
+  if (burger_nav_dropdown_menu_ul.style.display === 'flex') {
+    burger_nav_dropdown_menu_ul.style.display = 'none';
+    dropdown_ico.style.transform = 'rotate(0deg)'; // или 'rotate(0deg)'
+  } else {
+    burger_nav_dropdown_menu_ul.style.display = 'flex';
+    dropdown_ico.style.transform = 'rotate(180deg)';
+  }
+})
+/* */
+const dropdown = document.querySelector('.dropdown')
+const dropdown_menu = document.querySelector('.dropdown-menu')
+dropdown.addEventListener('click', function() {
+  // Проверяем текущее состояние и переключаем
+  if (dropdown_menu.style.display === 'flex') {
+    dropdown_menu.style.display = 'none';
+    dropdown_ico.style.transform = 'rotate(0deg)'; // или 'rotate(0deg)'
+  } else {
+    dropdown_menu.style.display = 'flex';
+    dropdown_ico.style.transform = 'rotate(180deg)';
+  }
+})
+
 /* при клике на на список выпадает меню */
 /*const Drop_Down = document.querySelector('.dropdown');
 const Dropdown_Menu = document.querySelector('.dropdown-menu');
@@ -140,4 +220,26 @@ const Email_Icon = document.querySelector('.wrap-icon-for-form-email');
 Email_Icon.addEventListener('click', function() {
   Email_Input.focus();
 });
-
+const email_subscribe = document.querySelector('.button-Subscribe-to-Newsletter')
+email_subscribe.addEventListener('click', function() {
+  alert('Учебный проект!\n\nЭто демонстрация интерфейса, данные никуда не отправляются и не сохраняются')
+})
+/*----------------------------------------------------------------------------*/
+const footer_ico = document.querySelectorAll('.footer-ico');
+footer_ico.forEach(icon_messager => {
+icon_messager.addEventListener('click', function() {
+  alert('Учебный проект!\n\nЭто демо-версия и ссылки на соцсети неактивны.\n\nВ реальном проекте здесь были бы ссылки на актуальные профили.')
+});
+});
+const footer_nav_item = document.querySelectorAll('.footer-nav-item');
+footer_nav_item.forEach(nav_item => {
+nav_item.addEventListener('click', function() {
+  alert('Еще в разработке...')
+});
+});
+const icon_pay_buttons = document.querySelectorAll('.icon-pay');
+icon_pay_buttons.forEach(icon_pay => {
+icon_pay.addEventListener('click', function() {
+  alert('Учебный проект!\n\nЭто демо-версия\n\nВ коммерческом проекте здесь была бы интеграция с платёжной системой')
+});
+});
