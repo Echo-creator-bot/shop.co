@@ -30,6 +30,9 @@ ul{
     margin: 0;           
     padding: 0; 
 }
+a:active{
+    -webkit-tap-highlight-color: transparent;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -111,12 +114,12 @@ a {
     
     background-color: var(--white);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     border-radius: 25px;
     height: 100%;
-    gap: 20px;
+    gap: 10px;
     padding: 30px 10px;
     border: 0px solid ;
 }
@@ -126,8 +129,13 @@ a {
     align-items: center;
     background-color: var(--light-gray);
     border-radius: 25px;
+    gap: 5px;
+    padding: 10px 0;
 
 
+}
+.wrap-for-decor *{
+    margin: 0;
 }
 .disclaimer-tittle{
     text-align: center;
@@ -729,7 +737,7 @@ height: 100%;
     position: absolute;
 }
 .black-star svg path{
-    transition: fill 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 .star-position-1{
     top: 13%;

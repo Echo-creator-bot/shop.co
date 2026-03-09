@@ -16,6 +16,8 @@ autorization_button.addEventListener('click', function(){
 close_form.addEventListener('click', function(){
   autorization.style.display = 'none';
 })
+
+
 const sign_up_button = document.querySelector('.sign-up');
 const log_in_button = document.querySelector('.log-in');
 const LogIn_wrap = document.querySelector('.LogIn-wrap');
@@ -54,7 +56,7 @@ burger.addEventListener('click', function(){
   menu.style.display = 'block';
 });
 document.addEventListener('click', function(){
-  menu.style.display = 'none';
+  menu.style.display = 'none';===============
 });
 
 */
