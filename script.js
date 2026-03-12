@@ -22,6 +22,7 @@ const sign_up_button = document.querySelector('.sign-up');
 const log_in_button = document.querySelector('.log-in');
 const LogIn_wrap = document.querySelector('.LogIn-wrap');
 const SignUp_wrap = document.querySelector('.SignUp-wrap');
+log_in_button.style.textDecoration = 'underline';
 log_in_button.addEventListener('click', function() {
   LogIn_wrap.style.display = 'flex';
   SignUp_wrap.style.display = 'none';

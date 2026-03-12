@@ -429,7 +429,7 @@ padding: 24px 15px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-gap: 31px;
+gap: 26px;
 flex-wrap: wrap;
 }
 .header-top-logo {
@@ -471,7 +471,7 @@ flex-wrap: wrap;
     right: -23px;
     flex-direction: column;
     background-color: var(--white);
-    border-radius: 30px;
+    border-radius: 22px;
     padding: 15px;
     gap: 10px;    
     will-change: transform;
@@ -1583,7 +1583,7 @@ justify-content: center;
     .dropdown-menu{
         position: static;
         font-size: 36px;
-        border-radius: 100%;
+        border-radius: 0%;
     }
     .decoration-stroke-for-dropdown-nav{
         display: block;
