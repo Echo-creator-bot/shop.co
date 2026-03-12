@@ -61,32 +61,40 @@ document.addEventListener('click', function(){
 
 */
 /*--------------------------------------------------------- */
-const header_menu = document.querySelector('.header-menu');
-const for_top_logo = document.querySelector('.for-top-logo');
-const nav_burger = document.querySelector('.nav-burger')
-header_menu.addEventListener('click', function() {
-  nav_burger.style.display = 'flex';
-  for_top_logo.style.display = 'none';
-
-
-  
+const burger_button = document.querySelector('.header-menu')
+const header_nav = document.querySelector('.header-top-nav')
+const close_nav_button = document.querySelector('.svg-close-nav')
+burger_button.addEventListener('click', function(){
+  header_nav.style.display = 'flex';
+  close_nav_button.style.display = 'block'
+});
+close_nav_button.addEventListener('click', function(){
+  header_nav.style.display = 'none';
 })
-const burger_dropdown = document.querySelector('.burger_dropdown')
-const burger_nav_dropdown_menu_ul = document.querySelector('.burger-nav-dropdown-menu-ul')
-const dropdown_ico = document.querySelector('.dropdown_ico')
-burger_dropdown.addEventListener('click', function() {
-  // Проверяем текущее состояние и переключаем
-  if (burger_nav_dropdown_menu_ul.style.display === 'flex') {
-    burger_nav_dropdown_menu_ul.style.display = 'none';
-    dropdown_ico.style.transform = 'rotate(0deg)'; // или 'rotate(0deg)'
-  } else {
-    burger_nav_dropdown_menu_ul.style.display = 'flex';
-    dropdown_ico.style.transform = 'rotate(180deg)';
+/**/ 
+/*клик по иконке и появляется инпут */
+const loupe_button = document.querySelector('.search-for-576px')
+const header_top_search_wrap = document.querySelector('.header-top-search-wrap')
+loupe_button.addEventListener('click', function(){
+header_top_search_wrap.style.display = 'flex';
+document.removeEventListener('click',close_nav_if_click)
+setTimeout(function(){
+
+  document.addEventListener('click', close_nav_if_click); 
+},0);
+});
+function close_nav_if_click(event) {
+  if (!header_top_search_wrap.contains(event.target)&& event.target !== loupe_button){
+    header_top_search_wrap.style.display = 'none';
+    document.removeEventListener('click',close_nav_if_click)
   }
-})
+}
+
 /* */
+/*выпадающее меню */
 const dropdown = document.querySelector('.dropdown')
 const dropdown_menu = document.querySelector('.dropdown-menu')
+const dropdown_ico = document.querySelector('.dropdown_ico')
 dropdown.addEventListener('click', function() {
   // Проверяем текущее состояние и переключаем
   if (dropdown_menu.style.display === 'flex') {
@@ -94,7 +102,7 @@ dropdown.addEventListener('click', function() {
     dropdown_ico.style.transform = 'rotate(0deg)'; // или 'rotate(0deg)'
   } else {
     dropdown_menu.style.display = 'flex';
-    dropdown_ico.style.transform = 'rotate(180deg)';
+    dropdown_ico.style.transform = 'rotate(-180deg)';
   }
 })
 
