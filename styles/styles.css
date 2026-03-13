@@ -463,13 +463,13 @@ flex-wrap: wrap;
 .dropdown{
     background-color: inherit;
     border: none;
-    padding-bottom: 0px;
+    padding-bottom:5px;
 }
 .dropdown-menu {
     display: none;
     position: fixed;
-    top: 20px;
-    right: -23px;
+    top: 18px;
+    right: -18px;
     flex-direction: column;
     background-color: var(--white);
     border-radius: 22px;
@@ -477,35 +477,48 @@ flex-wrap: wrap;
     gap: 10px;    
     will-change: transform;
     transition: transform 0.4s ease;
-    
+    font-size: 14px;
 }
 .dropdown_ico{
     will-change: transform;
     transition: transform 0.4s ease;
 }
 .dropdown-link {
-    transform: none;
-    text-shadow: none;
+        will-change: transform;
+    transition: transform 0.4s ease;
+}
+.dropdown-link-item-dropdown{
+    will-change: transform;
+    transition: transform 0.4s ease;
+}
+.dropdown-link-item-dropdown:hover{
+   transform: translateY(-2px);
+   opacity: 0.6; 
 }
 .dropdown-link:hover{
-    transform: none;
-    text-shadow: 0 0 15px currentColor;
+    transform: translateY(-2px);
 }
 .dropdown-menu:hover {
     transform: none;
 }
 .header-top-item:hover {
     transform: translateY(-2px);
-    text-shadow: 0 0 15px currentColor;
+}
+.header-top-item:first-child:hover {
+    transform: none;
 }
 .header-top-item:hover *{
-    transform: none !important;
 }
 .header-top-item-link { /* анимацию сюда */
     opacity: 1;
 }
+.header-top-item-link{
+    will-change: transform;
+    transition: transform 0.4s ease;
+}
 .header-top-item-link:hover {
     opacity: 0.6;
+    transform: translateY(-2px);
 }
 .wrap-search-info{
     width: 53.46%;
@@ -1597,8 +1610,10 @@ justify-content: center;
     }
     .dropdown-menu{
         position: static;
-        font-size: 36px;
+        font-size: 24px;
         border-radius: 0%;
+    }
+    .dropdown-link-item-dropdown{
     }
     .decoration-stroke-for-dropdown-nav{
         display: block;
@@ -1608,14 +1623,14 @@ justify-content: center;
     }
     .header-top-list{
         flex-direction: column;
-        font-size: 48px;
+        font-size: 36px;
         font-weight: 500;
         gap: 10px;
         justify-content: flex-start;
     }
     .dropdown_ico{
-        width: 25px;
-        height: 25px;
+        width: 18px;
+        height: 18px;
     }
     .for-top-logo{
         width: 126px;
