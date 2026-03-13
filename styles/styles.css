@@ -498,7 +498,7 @@ flex-wrap: wrap;
     text-shadow: 0 0 15px currentColor;
 }
 .header-top-item:hover *{
-    transform: none;
+    transform: none !important;
 }
 .header-top-item-link { /* анимацию сюда */
     opacity: 1;
@@ -1562,6 +1562,17 @@ justify-content: center;
 }
 
 }
+@media (min-width: 769px) {
+    .header-top-nav.menu-hidden {
+    display: flex !important; 
+}
+.header-top-nav {
+    display: flex !important; 
+    }
+.header-top-nav.menu-show {
+    display: flex !important; 
+    }
+}
 @media (max-width: 768px) {
     /*768px HEADER TOP*/
     .header-top-nav {
@@ -1579,6 +1590,9 @@ justify-content: center;
         justify-content: center;
 
 
+    }
+    .header-top-nav.menu-show {
+    display: flex !important;
     }
     .dropdown-menu{
         position: static;
@@ -1753,7 +1767,17 @@ padding:  44px 15px 44px 15px;
     height: 26px;
 }
 }
-    
+@media (min-width: 577px) {
+    .header-top-search-wrap.search-hidden {
+    display: flex !important;
+}
+  .header-top-search-wrap {
+    display: flex !important;
+  }
+  .header-top-search-wrap.search-show {
+    display: flex !important;
+  }
+}
 
 @media (max-width: 576px) {
     /*576px HEADER TOP*/
@@ -1762,14 +1786,18 @@ padding:  44px 15px 44px 15px;
         gap: 12px;
 
     }
-    
     .header-top-search-wrap {
-        display: none;
+    display: none; 
+  }
+  .header-top-search-wrap.search-show {
+    display: flex !important;
+  }
+    .header-top-search-wrap {
         position: fixed;
         top: 2%;
         z-index: 999;
-        width: 90%;
-        left: 5%;
+        width: 94%;
+        left: 3%;
     }
     .search-for-576px{
         display: block;
@@ -2268,4 +2296,11 @@ left: 74.9%;
 /* Фикс для карточек, чтобы они не сжимались в режиме слайдера */
 .flex-wrap-for-catalog.slider-mode .product-card {
   flex: 0 0 auto;
+}
+.header-top-nav.menu-hidden {
+  display: none !important;
+}
+
+.header-top-search-wrap.search-hidden {
+  display: none !important;
 }

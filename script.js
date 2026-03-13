@@ -62,32 +62,36 @@ document.addEventListener('click', function(){
 
 */
 /*--------------------------------------------------------- */
-const burger_button = document.querySelector('.header-menu')
-const header_nav = document.querySelector('.header-top-nav')
-const close_nav_button = document.querySelector('.svg-close-nav')
+const burger_button = document.querySelector('.header-menu');
+const header_nav = document.querySelector('.header-top-nav');
+const close_nav_button = document.querySelector('.svg-close-nav');
+
 burger_button.addEventListener('click', function(){
-  header_nav.style.display = 'flex';
-  close_nav_button.style.display = 'block'
+  header_nav.classList.add('menu-show'); // Добавляем класс show
+  close_nav_button.style.display = 'flex'; // Показываем крестик
 });
+
 close_nav_button.addEventListener('click', function(){
-  header_nav.style.display = 'none';
-})
+  header_nav.classList.remove('menu-show'); // Убираем класс show
+  close_nav_button.style.display = 'none'; // Прячем крестик
+});
 /**/ 
 /*клик по иконке и появляется инпут */
-const loupe_button = document.querySelector('.search-for-576px')
-const header_top_search_wrap = document.querySelector('.header-top-search-wrap')
-loupe_button.addEventListener('click', function(){
-header_top_search_wrap.style.display = 'flex';
-document.removeEventListener('click',close_nav_if_click)
-setTimeout(function(){
+const loupe_button = document.querySelector('.search-for-576px');
+const header_top_search_wrap = document.querySelector('.header-top-search-wrap');
 
-  document.addEventListener('click', close_nav_if_click); 
-},0);
+loupe_button.addEventListener('click', function(){
+  header_top_search_wrap.classList.add('search-show'); // Добавляем класс show
+  
+  setTimeout(function(){
+    document.addEventListener('click', close_search_if_click); 
+  }, 0);
 });
-function close_nav_if_click(event) {
-  if (!header_top_search_wrap.contains(event.target)&& event.target !== loupe_button){
-    header_top_search_wrap.style.display = 'none';
-    document.removeEventListener('click',close_nav_if_click)
+
+function close_search_if_click(event) {
+  if (!header_top_search_wrap.contains(event.target) && event.target !== loupe_button) {
+    header_top_search_wrap.classList.remove('search-show'); // Убираем класс show
+    document.removeEventListener('click', close_search_if_click);
   }
 }
 
