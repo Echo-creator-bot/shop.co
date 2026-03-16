@@ -3,7 +3,7 @@ function renderProductCard(product) {
     const card = document.createElement('article');
     card.className = 'product-card';
     card.innerHTML = `
-    <a href="./pages/product_detail_page.html" class="product-card-link-wrap">
+    <a href="../pages/product_detail_page.html?${product.id}" class="product-card-link-wrap">
         <div class="product-card-image-block">
             <img src="${product.titleImg}" alt="${product.name}" class="product-card-image">
         </div>
@@ -28,6 +28,7 @@ function renderProductCard(product) {
     `;
     return card;
 }
+
 /*Рендер звезд */
 function starRender(rating) {
     const fullStar = `<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,3 +71,4 @@ function renderCatalogPage() {
 document.addEventListener('DOMContentLoaded', function() {
     renderCatalogPage();
 });
+

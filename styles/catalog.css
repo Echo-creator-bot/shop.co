@@ -1,0 +1,25 @@
+.main-wrap{
+    display: flex;
+}
+.catalog{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.catalog_header{
+    display: flex;
+    justify-content: space-between;
+}
+.optional_filter{
+    display: flex;
+    gap: 12px;
+}
+.catalog_info{
+    display: flex;
+    gap: 4px;
+}
+.catalog_grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+}
