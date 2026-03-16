@@ -126,7 +126,80 @@ a {
 .svg-close-nav:hover svg path{
     opacity: 0.6;
 }
-/* авторизация*/
+
+/* дисклеймер*/
+.disclaimer{
+    display: block;
+    position: fixed;
+    z-index: 999;
+    background-color: var(--black);
+    top: 0px;
+    bottom: 0px;
+    left: 0%;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px) brightness(0.8);
+    -webkit-backdrop-filter: blur(10px) brightness(0.8);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.disclaimer-content{
+    width: 684px;
+    border-radius: 25px;
+}
+.wrap-for-decor{
+    
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    height: 100%;
+    gap: 10px;
+    padding: 30px 10px;
+    border: 0px solid ;
+}
+.disclaimer-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-gray);
+    border-radius: 25px;
+    gap: 5px;
+    padding: 10px 0;
+
+
+}
+.wrap-for-decor *{
+    margin: 0;
+}
+.disclaimer-tittle{
+    text-align: center;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+}
+.disclaimer-icon svg{
+    width: 60px;
+    height: 60px;
+}
+.disclaimer-small{
+    font-family: 'Roboto Condensed';
+    text-align: center;
+}
+.disclaimer-close{
+    padding: 16px 54px;
+    background-color: inherit ;
+    font-family: 'Roboto Condensed';
+    border-radius: 62px;
+    border: 1px solid #0000001A;
+
+}
+/**/
 .autorization{
     display: none;
     position: fixed;
@@ -287,6 +360,54 @@ a {
 }
 .svg-for-form-for-email{
     padding-left: 5px;
+}
+/**/
+.nav-burger{
+    display: none;
+    background-color: var(--white);
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    width: 40%;
+    height: 100%;
+}
+.nav-burger-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.wrap-logo-burger{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+}
+.wrap-button-back{
+    border: none;
+    background-color: inherit;
+    will-change: transform;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+}
+.wrap-button-back svg path{
+transition: opacity 0.4s ease;
+
+}
+.wrap-button-back:hover{
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    transform: scale(1.1);
+
+}
+.wrap-button-back:hover svg path{
+    opacity: 0.6;
+}
+.wrap-button-back:active{
+    transform: scale(0.92);
 }
 /*=====================================HEADER========================================*/
 /*====================================HEADER TOP=====================================*/
@@ -859,7 +980,96 @@ object-position: center;
     line-height: 100%;
     font-weight: 700;
 }
+/*===================SECTION DRESS STYLE=============*/
+.section-for-DressStyle {
+}
 
+.for-dress-style{
+    background-color: #F0F0F0;
+    border-radius: 40px;
+    padding: 70px 64px 76px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+.flex-DressStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+
+}
+.flex-DressStyle-row{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.flex-DressStyle-item {
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    padding: 25px 36px;
+    border-radius: 20px;
+    background-color: var(--white);
+    will-change: transform;
+    transition: transform 0.4s ease;
+
+}
+.flex-DressStyle-item:hover {
+    transform: scale(1.025);
+}
+.Casual:hover {
+    transform: scaleX(-1) scale(1.025);
+}
+.flex-DressStyle-item:active {
+    transform: scale(0.92);
+}
+.Casual:active {
+    transform: scaleX(-1) scale(0.92);
+}
+.Casual {
+    background-image: url('../image/casual-back.png');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    width: 32.1%;
+    height: 239px;
+    transform: scaleX(-1);
+
+}
+.rotate-back{
+    transform: scaleX(-1);
+
+}
+
+.Formal {
+    background-image: url('../image/formal-back.png');
+    background-size:95%;
+    background-repeat: no-repeat;
+    background-position: 250% 10%;
+    width: 53.9%;
+    height: 239px;
+
+}
+.Party {
+    background-image: url('../image/party-back.png');
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: 0% 20%;
+    width: 53.9%;
+    height: 239px;
+}
+.Gym {
+    background-image: url('../image/gym-back.png');
+    background-size:80%;
+    background-repeat: no-repeat;
+    background-position: 70% 30%;
+    width: 32.1%;
+    height: 239px;
+}
 /*=======================================*/
 .footer {
    background: linear-gradient(to bottom, 
@@ -1149,14 +1359,142 @@ color: #00000099;
     .wrap-search-info{
         width: 45.299%;
     }
+    /*1270PX HEADER BODY*/
+    .header-body-image-wrap {
+        width: 488px;
+        height: 532px;
+    }
+    .header-body-content-wrap {
+        padding: 25px 0 0px 0;
+        gap: 40px;
+    }
+    .header-body-text_button-content {
+        gap: 27px;
+    }
+    .header-body-content-title{
+        font-size: 54px;
+    }
+    .header-body-content-text{
+        font-size: 14px;
+    }
+    .header-body-differences {
+        gap: 20px;
+    }
+    .decortion-stroke{
+        height: 62px;
+    }
+    .heade-body-differences-number{
+        font-size: 34px;
+
+    }
+    .heade-body-differences-detail{
+        font-size: 14px;
+    }
+    /*1270PX HEADER END*/
+    /*1270PX SECTION NEW ARRIVALS AND TOP SELLING*/
+    /*1270PX SECTION DRESS STYLE*/
+.section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+}
+.Casual {
+        background-size: 155%;
+}
+.rotate-back {
+}
+.Formal {
+    background-size: 120%;
+    background-position: -25% 7%;
+}
+.Party {
+}
+.Gym {
+}
+.footer-form{
+    
+}
+
 }
 
 @media (max-width: 1045px) {
+/*1045PX HEADER TOP*/
+/*1045PX HEADER BODY*/
+.header-body-image-wrap {
+    margin: 0 17px;
+}
+.header-body-wrap {
+    justify-content: center;
+}
+.ShopNow-link-wrapper{
+display: flex;
+width: 100%;
+justify-content: center;
+}
+.header-body-content-title, .header-body-content-text {
+    text-align: center;
+}
+.header-body-content-wrap {
+    padding-top: 40px;
+}
 .header-top-nav{
     order: 1;
 }
 .header-top {
     gap: 32px;
+}
+/*1045PX HEADER END*/
+
+    .header-end-wrap {
+        justify-content: center;
+        padding: 44px 0;
+    }
+    .header-end-wrap {
+        padding:  44px 153px 44px 153px;
+    }
+/*1045PX SECTION NEW ARRIVALS AND TOP SELLING*/
+/*1045PX SECTION DRESS STYLE*/
+.section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+}
+.Casual {
+        background-size: 120%;
+}
+.rotate-back {
+}
+.Formal {
+        background-size: 120%;
+    background-position: -25% 7%;
+}
+.Party {
+}
+.Gym {
+    background-size: 116%;
+    background-position: -50% 35%;
 }
 /*1045px footer*/
 .footer-form{
@@ -1170,6 +1508,45 @@ color: #00000099;
 }
 
 @media (max-width: 992px) {
+/*992px HEADER TOP*/
+/*992px HEADER BODY*/
+/*992px HEADER END*/
+/*992px SECTION NEW ARRIVALS AND TOP SELLING*/
+
+/*992px SECTION DRESS STYLE*/
+.section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+    text-align: center;
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+    padding: 20.5px 30px;
+    height: 198.5px;
+    font-size: 30px;
+}
+.Casual {
+    background-size: 150%;
+}
+.rotate-back {
+}
+.Formal {
+        background-size: 150%;
+    background-position: -25% 7%;
+}
+.Party {
+}
+.Gym {
+}
 /*footer-body*/
 .wap-fo-wap-links{
     display: block;  
@@ -1283,6 +1660,19 @@ color: #00000099;
         width: 126px;
         height: 18px;
     }
+    /*768px HEADER BODY*/
+        .star-settings-1{
+width: 76px;
+height: 76px;
+}
+.star-settings-2{
+width: 44px;
+height: 44px;
+}
+/*768px HEADER END*/
+.header-end-wrap {
+padding:  44px 15px 44px 15px;
+}
 /*768px SECTION NEW ARRIVALS AND TOP SELLING*/
 
 .for-Arrivals {
@@ -1323,6 +1713,43 @@ color: #00000099;
 }
 .for-top-selling {
     font-size: 32px;
+}
+/*768px SECTION DRESS STYLE*/
+.section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+    font-size: 32px;
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+    font-size: 24px;
+    width: 50%;
+    height: 158px;
+    padding: 16px 24px;
+}
+.Casual {
+        background-size: 200%;
+}
+.rotate-back {
+}
+.Formal {
+        background-size: 200%;
+    background-position: -5% 7%;
+}
+.Party {
+    background-size: 150%;
+    background-position: 30% 20%;
+}
+.Gym {
 }
 /*768px footer*/
 .form-tittle{
@@ -1406,6 +1833,172 @@ color: #00000099;
     .wrap-search-info{
         width: auto;
     }
+    /*576px HEADER BODY*/
+                .header-body-image-wrap {
+            width: 430px;
+            height: auto;
+    }
+    .header-body-differences {
+        justify-content: center;
+    }
+                .header-body-content-title{
+        font-size: 38px;
+        line-height: 34px;
+    }
+    .header-body-content-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .decortion-stroke{
+        height: 54px;
+    }
+    .heade-body-differences-number{
+        font-size: 26px;
+
+    }
+    .heade-body-differences-detail{
+        font-size: 14px;
+    }
+    .header-body-wrap{
+        gap: 0px;
+    }
+    /*576px HEADER END*/
+    .Calvin-svg{
+        width: 135px;
+        height: 22px;
+    }
+    .prada-svg{
+        width: 127px;
+        height: 21px;
+    }
+    .gucci-svg{
+        width: 110px;
+        height: 26px;
+    }
+    .zara-svg{
+        width: 64px;
+        height: 27px;
+    }
+
+    .Versache-svg{
+        width: 117px;
+        height: 24px;
+    }
+    .header-end-wrap{
+        padding-left: 0;
+        padding-right: 0;
+        gap: 32px;
+    }
+    .header-end-block{
+        margin: 0 8px;
+    }
+    .header-top-interaction-CartLink{
+    }
+    /*576px SECTION NEW ARRIVALS AND TOP SELLING*/
+    .main {
+}
+.main-section-CatalogPrimary {
+}
+.wrapper {
+}
+.for-section-CatalogPrimary {
+}
+.section-for-Catalog {
+}
+.NewArrivals {
+}
+.tittle {
+}
+.for-Arrivals {
+}
+.flex-wrap-for-catalog {
+}
+.product-card {
+}
+.card-first {
+}
+.product-card-image-block {
+}
+.product-card-image {
+}
+.product-card-info {
+}
+.product-card-name {
+}
+.product-card-rating-wrap {
+}
+.product-card-rating-star-wrap {
+}
+.product-card-rating-valuation-wrap {
+}
+.product-card-rating-valuation {
+}
+.product-card-rating-of {
+}
+.product-card-rating-of-number {
+}
+.product-card-price-wrap {
+}
+.product-card-price {
+}
+.product-card-price-past-priсе {
+}
+.product-card-price-sell {
+}
+.card-second {
+}
+.visible {
+}
+.card-third {
+}
+.card-fourth {
+}
+.ViewAll-button-wrap {
+}
+.ViewAll-button {
+}
+.decoration-stroke {
+}
+.TopSelling {
+}
+.for-top-selling {
+}
+    /*576px SECTION DRESS STYLE*/
+    .section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+    gap: 28px;
+    padding: 40px 24px 27px 24px;
+}
+.tittle {
+}
+.tittle-forDressstyle {
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+    flex-wrap: wrap;
+}
+.flex-DressStyle-item {
+    width: 100%;
+}
+.Casual {
+        background-size: 150%;
+}
+.rotate-back {
+}
+.Formal {
+    
+}
+.Party {
+}
+.Gym {
+        background-size: 80%;
+    background-position: 130% 55%;
+}
+
 /*Footer*/
 .footer-form{
     padding: 28px 24px;
@@ -1494,6 +2087,101 @@ font-size: 36px;
     .last {
     display: none;
 }
+    /*480px HEADER BODY*/
+        .header-body-content-title, .header-body-content-text {
+        text-align: start;
+    }
+
+            .header-body-image-wrap {
+        min-width: 390px;
+        height: auto;
+    }
+            .ShopNow-link-wrapper {
+        justify-content: center;
+        width: 100%;
+    }
+    .ShopNow-link{
+        width: 100%;
+        margin: 0 10%;
+    }
+    .header-body-ShopNow-button{
+        width: 100%;
+    }
+            .header-body-content-title{
+        font-size: 36px;
+        line-height: 34px;
+    }
+    .header-body-content-text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .decortion-stroke{
+        height: 52px;
+    }
+    .heade-body-differences-number{
+        font-size: 24px;
+
+    }
+    .heade-body-differences-detail{
+        font-size: 12px;
+    }
+    .header-body-wrap{
+        gap: 0px;
+    }
+
+    .star-position-1{
+    top: 13%;
+    left: 74.9%;
+}
+
+    .star-position-2{
+    top: 44.8%;
+    left: 10%;
+}
+.header-body-content-wrap{
+    gap: 20px;
+}
+    /*480px HEADER END*/
+            .header-end-block{
+        margin: 0 0px;
+    }
+    /*480px SECTION NEW ARRIVALS AND TOP SELLING*/
+.ViewAll-button-wrap {
+    
+}
+.ViewAll-button {
+    width: 100%;
+}
+    /* 480px SECTION DRESS STYLE*/
+    .section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+}
+.Casual {
+        background-size: 200%;
+}
+.rotate-back {
+}
+.Formal {
+}
+.Party {
+}
+.Gym {
+            background-size: 90%;
+    background-position: 200% 55%;
+}
 /*footer-body*/
 .footer{
     gap: 40px;
@@ -1554,6 +2242,48 @@ font-size: 36px;
 }
 
 @media (max-width: 390px) {
+/*390px HEADER TOP*/
+/*390px HEADER BODY*/
+.star-position-2{
+top: 44.8%;
+left: 10%;
+}
+
+.star-position-1{
+top: 13%;
+left: 74.9%;
+}
+/*390px HEADER END*/
+/*390px SECTION NEW ARRIVALS AND TOP SELLING*/
+
+/*390px SECTION DRESS STYLE*/
+.section-for-DressStyle {
+}
+.wrapper {
+}
+.for-dress-style {
+}
+.tittle {
+}
+.tittle-forDressstyle {
+}
+.flex-DressStyle {
+}
+.flex-DressStyle-row {
+}
+.flex-DressStyle-item {
+}
+.Casual {
+        background-size: 120%;
+}
+.rotate-back {
+}
+.Formal {
+}
+.Party {
+}
+.Gym {
+}
 }
 
 
@@ -1592,3 +2322,6 @@ font-size: 36px;
 }
 
 /**/
+
+
+
